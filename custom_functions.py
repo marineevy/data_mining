@@ -23,7 +23,7 @@ def get_coefs(model):
                    columns = ['Coefficients'], # name the column Coefficients
                    index = model.feature_names_in_).round(3)])
 
-  return get_coefs
+  return model_coefs
 
 def compute_metrics(model, x, y):
   y_train_pred = model.predict(x)
