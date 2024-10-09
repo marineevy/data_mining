@@ -34,6 +34,6 @@ def compute_metrics(model, x, y):
   specificity = recall_score(pred_vs_actual['Actual'], pred_vs_actual['Predictions'], pos_label=0)
   fscore = f1_score(pred_vs_actual['Actual'], pred_vs_actual['Predictions'])
   perf = [accuracy,sensitivity,specificity,fscore]
-  perf = pd.Dataframe(perf, index = ['Accuracy','Sensitivity','Specificity','F-Score'])
+  perf = pd.DataFrame(perf, index = ['Accuracy','Sensitivity','Specificity','F-Score'])
 
   return pred_vs_actual, perf
